@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .widget {
+    padding: 20px 30px;
+    float: left;
+    min-height: 100%;
+    position: sticky;
+    width: 230px;
+    height: 100%;
+    background-color: #f8f9fa;
+    z-index: 2;
+  }
+
+  .widget-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 2px solid #b99d61;
+  }
+
+  .widget-list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .widget-list a:before {
+    content: "\2014";
+    margin-right: 14px;
+  }
+
+  .widget-list a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #444;
+    transition: .3s linear;
+  }
+
+  .widget-list a:hover {
+    color: #2A506D;
+  }
+
+  header {
+    background: linear-gradient(45deg, rgba(4,33,55,1) 0%, rgba(113,142,164,1) 100%);
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 10px;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    padding-bottom: 0%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+ iframe{
+    width: 100%;
+    height: 63vh;
+    display: block;
+    border: none;
+  }
+</style>
+</head>
+
+<body>
+
+  <header>Виды соединения проводников</header>
+
+  <div class="widget">
+    <h3 class="widget-title">Механика</h3>
+    <ul class="widget-list">
+      <li><a href="../kinematic/kinematic.html" style="color: #09093C;">Кинематика</a></li>
+    <li><a href="../dinamik/dinamik.html" style="color: #09093C;">Динамика</a></li>
+    <li><a href="../lowsofenergy/lowsofenergy.html" style="color: #09093C;">Законы созранеия энергии</a></li>
+    </ul>
+
+    <h3 class="widget-title">Оптика</h3>
+    <ul class="widget-list">
+      <li><a href="../prelomlight/prelomlight.html" style="color: #1C053A;">Преломление света</a></li>
+    <li><a href="../lenses/lenses.html" style="color: #1C053A;">Линзы</a></li>
+    </ul>
+
+    <h3 class="widget-title">Электричество и Магнетизм</h3>
+    <ul class="widget-list">
+      <li><a href="../ohmlow/ohmlow.html" style="color: #042137;">Закон Ома</a></li>
+    <li><a href="../conections/conection.html" style="color: #042137;">Виды Соединения проводников</a></li>
+    </ul>
+    <h3 class="widget-title">Колебания и волны</h3>
+    <ul class="widget-list">
+      <li><a href="../mechanicwave/mechanicwave.html" style="color: #564001;">Механические Колебания</a></li>
+  <li><a href="../sound/sound.html" style="color: #564001;">Звук</a></li>
+    </ul>
+    </div>
+
+<div>
+  <div style="margin-left: 240px; margin-top: 10px;">
+    <div>
+      <div>
+        <h2>Базовые определения</h2>
+      </div>
+      <div>
+        
+        <iframe src="series.html"></iframe>
+        <iframe src="parallel.html"></iframe>
+
+        <iframe src="mix.html"></iframe>
+      </div>
+    </div>
+  
+  </div>
+
+</body>
+
+</html>

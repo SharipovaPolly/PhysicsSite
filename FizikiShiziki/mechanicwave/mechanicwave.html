@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .widget {
+    padding: 20px 30px;
+    float: left;
+    min-height: 100%;
+    position: sticky;
+    width: 230px;
+    height: 100%;
+    background-color: #f8f9fa;
+    z-index: 2;
+  }
+
+  .widget-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-left: 2px solid #b99d61;
+  }
+
+  .widget-list {
+    padding: 0;
+    list-style: none;
+  }
+
+  .widget-list a:before {
+    content: "\2014";
+    margin-right: 14px;
+  }
+
+  .widget-list a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    padding: 6px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #444;
+    transition: .3s linear;
+  }
+
+  .widget-list a:hover {
+    color: #AA8E39;
+  }
+
+  p{
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+  header {
+    background: linear-gradient(45deg, rgba(86,64,1,1) 0%, rgba(255,233,170,1) 100%);
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 10px;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    padding-bottom: 0%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+ iframe{
+    width: 100%;
+    height: 63vh;
+    display: block;
+    border: none;
+  }
+</style>
+</head>
+
+<body>
+
+  <header>Волны</header>
+
+  <div class="widget">
+    <h3 class="widget-title">Механика</h3>
+    <ul class="widget-list">
+      <li><a href="../kinematic/kinematic.html" style="color: #09093C;">Кинематика</a></li>
+    <li><a href="../dinamik/dinamik.html" style="color: #09093C;">Динамика</a></li>
+    <li><a href="../lowsofenergy/lowsofenergy.html" style="color: #09093C;">Законы созранеия энергии</a></li>
+    </ul>
+
+    <h3 class="widget-title">Оптика</h3>
+    <ul class="widget-list">
+      <li><a href="../prelomlight/prelomlight.html" style="color: #1C053A;">Преломление света</a></li>
+    <li><a href="../lenses/lenses.html" style="color: #1C053A;">Линзы</a></li>
+    </ul>
+
+    <h3 class="widget-title">Электричество и Магнетизм</h3>
+    <ul class="widget-list">
+      <li><a href="../ohmlow/ohmlow.html" style="color: #042137;">Закон Ома</a></li>
+    <li><a href="../conections/conection.html" style="color: #042137;">Виды Соединения проводников</a></li>
+    </ul>
+    <h3 class="widget-title">Колебания и волны</h3>
+    <ul class="widget-list">
+      <li><a href="../mechanicwave/mechanicwave.html" style="color: #564001;">Механические Колебания</a></li>
+  <li><a href="../sound/sound.html" style="color: #564001;">Звук</a></li>
+    </ul>
+    </div>
+
+<div>
+  <div style="margin-left: 240px; margin-top: 10px;">
+    <div>
+      <div>
+        <h2>Колебания — </h2>
+        <p>Это повторяющиеся во времени изменения состояния системы. Колебания отслеживают с помощью маятников. Есть три типа маятников: гармонический – когда колебания затухающие, пружинный и математический – идеальная модель для изучения колебаний. В задачах чаще всего встречается математический маятник.
+            </p>
+        <p>Если маятник отклонить и отпустить, то начнутся колебания. Положение равновесия — это положение маятника при отсутствии отклонения. В этом положении маятник, если его не трогать, может пребывать сколь угодно долго. Сразу после того, как отклонённый маятник отпустили, он начал двигаться, прошёл положение равновесия, достиг противоположного крайнего положения, на мгновение остановился в нём, двинулся в обратном направлении, снова прошёл положение равновесия и вернулся назад. Совершилось одно полное колебание. Дальше этот процесс будет периодически повторяться.  </p>
+      <p>Движение маятника описывают с помощью графика, где по оси Y измеряют амплитуду x, метры;  по оси X измеряют период колебаний T, секунды;</p>
+      <p><b>Амплитуда колебаний тела </b>— это величина его наибольшего отклонения от положения равновесия.</p>
+      <p><b>Период колебаний T</b>— это время одного полного колебания</p>
+      <p><b>Частота колебаний ν </b>—это величина, обратная периоду: ν = 1/T. Частота измеряется в герцах (Гц) и показывает, сколько полных колебаний совершается за одну секунду.</p>
+
+    </div>
+      <div>
+        
+        <iframe src="grafic.html"></iframe>
+      </div>
+    </div>
+  
+  </div>
+
+</body>
+
+</html>

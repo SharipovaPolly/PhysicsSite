@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
+  <script>
+    var canvas, stage, tween, box, valb;
+    var fictional = 0;
+
+    function init() {
+      canvas = document.getElementById("testCanvas");
+      stage = new createjs.Stage(canvas);
+
+
+		createjs.Touch.enable(stage);
+
+      var line = new createjs.Shape();
+      stage.addChild(line);
+      line.graphics.setStrokeStyle(1.5).beginStroke("rgba(0,0,0,1)");
+      line.graphics.moveTo(0, canvas.height / 2 + 20);
+      line.graphics.lineTo(canvas.width, canvas.height / 2 + 20);
+      line.graphics.endStroke();
+
+      var box= new createjs.Shape();
+      box.x = 100;
+      box.y = canvas.height / 2-20;
+      box.graphics.beginFill("#09093C").drawRect(0, 0, 80, 40);
+
+
+      stage.addChild(box);
+
+      //tween = createjs.Tween.get(ball, {loop: 0, bounce:false, timeScale: 1})
+      //.to({x: canvas.width-100}, 1000) 
+      createjs.Ticker.timingMode = createjs.Ticker.RAF;
+      stage.addEventListener("stagemousedown", handleMouseDown);
+		stage.addEventListener("stagemouseup", handleMouseUp);
+
+      createjs.Ticker.addEventListener("tick", stage);
+    }
+
+    function handleMouseDown(event) {
+		if (!event.primary) { return; }
+
+         box  = new createjs.Shape()
+         box.x = 100;
+          
+      box.y = canvas.height / 2-20;
+      box.graphics.beginFill("#09093C").drawRect(0, 0, 80, 40);
+      stage.addChild(box);
+      stage.removeChildAt(1);
+		stage.addEventListener("stagemousemove", handleMouseMove);
+	}
+
+	function handleMouseMove(event) {
+  if (!event.primary) { return; }
+  fN=(stage.mouseX-box.x)/2;
+  if(fN>100){
+    fN-=100;
+  }
+  box.x = 100+ fN; 
+  box.y = canvas.height / 2-20;
+  stage.update();
+}
+
+
+function handleMouseUp(event) {
+  if (!event.primary) { return; }
+  box.x = 100;
+  stage.removeEventListener("stagemousemove", handleMouseMove);
+}
+
+    function setTimeScale(val) {
+        
+      valb = val;
+      timeScaleFld.innerText = val.toFixed(1);
+    }
+  </script>
+  <title>Document</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  canvas {
+    width: 50vw;
+    height: 20vw;
+    border: 2px solid;
+  }
+</style>
+</head>
+
+<body onload="init();">
+    <div>
+      <!-- описать загаловок   float: right;-->
+      <p>Кинематика</p>
+      <p>Равномерное прямолинейное движение </p>
+      <canvas id="testCanvas" width="960" height="400"></canvas>
+      <div>
+        <code>tween.timeScale = <b id="timeScaleFld">1.0</b></code> <input type="range" id="timeScale" min="10" max="200"
+        value="100" oninput="setTimeScale(this.value/100)">
+      
+    </div>
+
+
+</body>
+
+</html>
